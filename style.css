@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.summary {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.summary .card {
+    flex: 1;
+    text-align: center;
+}
+
+.income-card { border-left: 5px solid #00ff88; }
+.expense-card { border-left: 5px solid #ff4d4d; }
+.balance-card { border-left: 5px solid #00c3ff; }
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+input, select {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    background: #00c3ff;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0099cc;
+    transform: scale(1.05);
+}
+
+.transactions ul {
+    list-style: none;
+}
+
+.transactions li {
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.income { border-left: 5px solid #00ff88; }
+.expense { border-left: 5px solid #ff4d4d; }
+
+.delete-btn {
+    background: red;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.chart-section {
+    text-align: center;
+}
+
+canvas {
+    max-width: 400px;
+    margin: auto;
+}
+
+#error-msg {
+    color: yellow;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .summary {
+        flex-direction: column;
+    }
+}
